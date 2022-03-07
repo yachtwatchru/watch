@@ -15,6 +15,7 @@ jobs:
         uses: actions/setup-python@v2
       - name: execute py script # run the run.py to get the latest data
         run: |
+          pip3 install -r requirements.txt
           python watch.py
           git add history.csv
           git commit -m "update"
