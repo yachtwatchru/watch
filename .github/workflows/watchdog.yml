@@ -1,8 +1,9 @@
 name: watchdog
     
 on:
+  workflow_dispatch: {}
   schedule:
-    - cron: "5 * * * *" #runs at 12 everyday
+    - cron: "0 */12 * * *" #runs at 12 everyday
     
 jobs:
   build:
