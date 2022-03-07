@@ -17,6 +17,8 @@ jobs:
         run: |
           pip3 install -r requirements.txt
           python watch.py
+          git config --global user.email "yachtwatchru@github.com"
+          git config --global user.name "Watcher"
           git add history.csv
           git commit -m "update"
           git push
