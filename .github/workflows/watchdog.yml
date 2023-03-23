@@ -15,6 +15,7 @@ jobs:
         uses: actions/setup-python@v2
       - name: execute py script # run the run.py to get the latest data
         run: |
+          apt-get install build-dep python3-lxml
           pip3 install -r requirements.txt
           python watch.py
           git config --global user.email "yachtwatchru@github.com"
